@@ -131,7 +131,7 @@ function draw() {
     //establecer tiempo de vida a los objetos del juego para que nunca se destruyan.
     obstaclesGroup.setLifetimeEach(-1);
     cloudsGroup.setLifetimeEach(-1);
-    
+    if(mousePressedOver(restart)) { reset(); }
     if(touches.length>0 || keyDown("SPACE")) {      
       reset();
       touches = []
